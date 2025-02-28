@@ -55,6 +55,7 @@ export default {
 </script>
 
 <style scoped>
+
 .notes-app {
   max-width: 400px;
   margin: auto;
@@ -62,26 +63,36 @@ export default {
   text-align: center;
 }
 .note-input {
-  text-decoration-color: blue; 
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
+  font-size: 24;  
 }
+
 input {
   flex: 1;
   padding: 8px;
 }
+
 button {
   padding: 8px;
   cursor: pointer;
+  color: green;
 }
+
 ul {
   list-style: none;
   padding: 0;
 }
+
 li {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
+}
+
+h1 {
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
 }
 </style>
