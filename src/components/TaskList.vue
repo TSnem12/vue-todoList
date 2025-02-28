@@ -22,14 +22,18 @@
 import TaskItem from './TaskItem.vue';
 
 export default {
+  mounted() {
+    localStorage.removeItem("tasks");
+    this.tasks = [];
+  },
+
   components: { TaskItem },
   
   data() {
     return {
       newTask: "",
-      tasks:
-      JSON.parse(localStorage.getItem("tasks")) || []
-    };
+      tasks: [],
+    };  
   },
 
   methods: {
@@ -37,19 +41,16 @@ export default {
       if (this.newTask.trim()) {
         this.tasks.push({ text: this.newTask, color: this.getRandomColor(), isEditing: false, isDone: false });
         this.newTask = "";
-        localStorage.setItem("tasks", JSON.stringify(this.tasks));
       }
     },
     
 
     removeTask(index) {
       this.tasks.splice(index, 1);
-      localStorage.setItem("tasks", JSON.stringify(this.tasks));
     },
 
     updateTask(index, updatedTask) {
       this.tasks[index] = {...updatedTask};
-      localStorage.setItem("tasks", JSON.stringify(this.tasks));
     },
 
     getRandomColor() {
@@ -63,7 +64,6 @@ export default {
 
     toggleDone(index) {
       this.tasks[index].isDone = !this.tasks[index].isDone;
-      localStorage.setItem("tasks", JSON.stringify(this.tasks));
     }
   }
 }

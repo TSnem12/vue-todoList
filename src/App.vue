@@ -1,27 +1,14 @@
 <template>
-  <div id="app">
-    <TaskList />
-  </div>
+  <dailyNotes />
 </template>
 
 <script>
-import TaskList from './components/TaskList.vue';
+import DailyNotes from './components/DailyNotes.vue';
 
 export default {
-  components: { TaskList }
+  components: { DailyNotest }
 }
 </script>
-
-<style>
-#app {
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
-.task-container {
-    width: 800px;
-
-}
-</style>
 
 
 
