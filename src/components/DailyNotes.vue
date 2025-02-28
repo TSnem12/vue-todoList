@@ -67,7 +67,7 @@ export default {
   gap: 10px;
   margin-bottom: 10px;
   font-size: 24; 
-  color: red; 
+  color: red !important; 
 }
 
 input {
