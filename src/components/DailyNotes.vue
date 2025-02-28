@@ -62,6 +62,7 @@ export default {
   text-align: center;
 }
 .note-input {
+  text-decoration-color: blue; 
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
