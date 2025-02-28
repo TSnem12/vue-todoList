@@ -6,7 +6,7 @@
 import DailyNotes from './components/DailyNotes.vue';
 
 export default {
-  components: { DailyNotest }
+  components: { DailyNotes }
 }
 </script>
 
