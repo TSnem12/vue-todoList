@@ -66,7 +66,8 @@ export default {
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
-  font-size: 24;  
+  font-size: 24; 
+  color: red; 
 }
 
 input {
