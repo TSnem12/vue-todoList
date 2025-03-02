@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import NoteList from './components/Notelist.vue';
+import NoteList from './components/NoteList.vue';
 
 export default {
   components: { NoteList },
