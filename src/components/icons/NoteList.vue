@@ -28,7 +28,7 @@ export default {
 
         deleteNote(index) {
             this.notes.splice(index, 1);
-            this.$emit("update-note", [...this.notes]);
+            this.$emit("update-notes", [...this.notes]);
 
         },
     },

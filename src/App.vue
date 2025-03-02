@@ -26,9 +26,9 @@ export default {
     addNote() {
       if (!this.newNote.trim()) return;
 
-      this.notes.push({ text: this.newNote, date: new Date().toLocaleDateString() });
-      this.newNote = "";
-      this.saveNotes();
+        this.notes.push({ text: this.newNote, date: new Date().toLocaleDateString() });
+        this.newNote = "";
+        this.saveNotes();
     },
 
     updateNotes(updatedNotes) {
