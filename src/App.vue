@@ -26,9 +26,9 @@ export default {
     addNote() {
       if (!this.newNote.trim()) return;
 
-        this.notes.push({ text: this.newNote, date: new Date().toLocaleDateString() });
-        this.newNote = "";
-        this.saveNotes();
+      this.notes.push({ text: this.newNote, date: new Date().toLocaleDateString() });
+      this.newNote = "";
+      this.saveNotes();
     },
 
     updateNotes(updatedNotes) {
@@ -50,6 +50,20 @@ export default {
   margin: auto;
   padding: 20px;
   text-align: center;
+}
+
+.note-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  color: black;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 </style>
 
