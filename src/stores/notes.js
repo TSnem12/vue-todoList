@@ -34,7 +34,7 @@ export const useNotesStore = defineStore('notes', {
 
     async deleteNote(id) {
       try {
-        await axios.delete('${API}/${id}')
+        await axios.delete(`${API}/${id}`)
         this.notes = this.notes.filter(note => note.id !== id)
       } catch (err) {
         console.error('فشل حذف النوت')
