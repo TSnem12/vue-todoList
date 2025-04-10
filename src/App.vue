@@ -7,10 +7,8 @@
     </nav>
 
     <div class="note-input">
-      <form @submit.prevent="addNote">
         <input v-model="newNote" placeholder="اكتب نوتة جديدة" />
-        <button type="submit">Addition</button>
-      </form>  
+        <button @click="addNote">Addition</button>
     </div>
 
     <NoteList :notes="notes" @update-notes="updateNotes" />
