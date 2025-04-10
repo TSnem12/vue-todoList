@@ -13,5 +13,7 @@ export default {
 </script>
 
 <style scoped>
-/* يمكنك إضافة تنسيق هنا */
+h1 {
+    color: blue;
+    }
 </style>
