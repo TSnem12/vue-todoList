@@ -1,6 +1,6 @@
 <template>
       <li>
-        <span>{{ note.text }} - {{ note.date }}</span>
+        <span>{{ note.content }} - {{ note.date }}</span>
         <button @click="$emit('edit-note', index)">✒</button>
         <button @click="$emit('delete-note', index)">❎</button>
       </li>  

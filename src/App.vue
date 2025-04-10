@@ -7,9 +7,10 @@
     </nav>
 
     <div class="note-input">
-       <h1>My Daily Notes</h1>
-       <input v-model="newNote"  placeholder="Write your note here..">
-       <button @click="addNote">Addition</button>
+      <form @submit.prevent="addNote">
+        <input v-model="newNote" placeholder="اكتب نوتة جديدة" />
+        <button @click="addNote">Addition</button>
+      </form>
     </div>
 
     <NoteList :notes="notes" @update-notes="updateNotes" />
