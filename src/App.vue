@@ -7,8 +7,10 @@
     </nav>
 
     <div class="note-input">
+      <form @submit.prevent="addNote">
         <input v-model="newNote" placeholder="اكتب نوتة جديدة" />
         <button @click="addNote">Addition</button>
+      </form>  
     </div>
 
     <NoteList :notes="notes" @update-notes="updateNotes" />
@@ -65,8 +67,9 @@ export default {
   gap: 10px;
   margin-bottom: 10px;
   width: 200px;
-  padding: 10px;
+  padding: 20px;
   border: 2px;
+  height: 50px;
 }
 
 
@@ -76,6 +79,8 @@ input {
   color: black;
   font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;
+  width: 400px;
+  height: 50px;
 }
 </style>
 

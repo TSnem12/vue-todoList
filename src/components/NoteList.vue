@@ -39,7 +39,7 @@ export default {
             const updatedText = prompt("Edit note:", note.content);
                 if (updatedText !== null) {
                    try {
-                    await axios.put('${API}/${note.id}', "{content: updatedText}")
+                    await axios.put(`${API}/${note.id}`, {content: updatedText})
                     this.notes[index].content = updatedText;
                    } catch (err) {
                     console.error("فشل تعديل النوت", err)
@@ -50,7 +50,7 @@ export default {
         async deleteNote(index) {
             const note = this.notes[index]
             try {
-                await axios.delete('${API}/${note.id}')
+                await axios.delete(`${API}/${note.id}`)
                 this.notes.splice(index, 1)
             } catch (err) {
                 console.error("فشل حذف النوتات", err)
