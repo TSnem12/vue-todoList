@@ -18,7 +18,7 @@ export default {
     components: { NoteItem },
     props: ["notes"],
     methods: {
-        editNote(index) {g
+        editNote(index) {
             const updatedText = prompt("Edit note:", this.notes[index].text);
                 if (updatedText !== null) {
                     this.notes[index].text = updatedText;
