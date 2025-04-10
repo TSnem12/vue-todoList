@@ -1,11 +1,20 @@
 <template>
   <div class="notes-app">
+
+    <nav>
+      <router-link to="/">Notes</router-link>
+      <router-link to="/about">About</router-link>   
+    </nav>
+
     <div class="note-input">
        <h1>My Daily Notes</h1>
        <input v-model="newNote"  placeholder="Write your note here..">
        <button @click="addNote">Addition</button>
     </div>
+
     <NoteList :notes="notes" @update-notes="updateNotes" />
+
+    <router-view/>
   </div>  
 </template>
 
