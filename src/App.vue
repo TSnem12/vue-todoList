@@ -9,7 +9,7 @@
     <div class="note-input">
       <form @submit.prevent="addNote">
         <input v-model="newNote" placeholder="اكتب نوتة جديدة" />
-        <button @click="addNote">Addition</button>
+        <button type="submit">Addition</button>
       </form>  
     </div>
 
@@ -81,6 +81,16 @@ input {
   font-family: Arial, Helvetica, sans-serif;
   width: 400px;
   height: 50px;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 </style>
 
